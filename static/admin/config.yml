@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: juanbernalGL/first-JAMStack
+
+media_folder: "static/media"
+public_folder: "/media"
+
+collections:
+  - name: "page"
+    label: "Page"
+    folder: "content/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "select", options: ["JJ", "Juandi"] }
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "premium"
+    label: "Premium Page"
+    folder: "/content/premium"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "select", options: ["JJ", "Juandi"] }
+      - {label: "Date", name: "date", widget: "datetime"}
